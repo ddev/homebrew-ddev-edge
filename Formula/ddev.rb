@@ -5,15 +5,15 @@
 class Ddev < Formula
   desc "DDEV"
   homepage "https://github.com/ddev/ddev"
-  version "1.21.5-rc1"
+  version "1.21.5"
   license "Apache 2"
 
   depends_on "mkcert"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/ddev/ddev/releases/download/v1.21.5-rc1/ddev_macos-arm64.v1.21.5-rc1.tar.gz"
-      sha256 "719d6d916a4f05fc3bda7be083febe5e85fdcbe82fae121bde67dd26f862e244"
+      url "https://github.com/ddev/ddev/releases/download/v1.21.5/ddev_macos-arm64.v1.21.5.tar.gz"
+      sha256 "57d63fcec7c1eec33dec499d1ab82fe67d61029dbdfeee4301e4d7cb0f2e1666"
 
       def install
         if build.head?
@@ -31,8 +31,8 @@ class Ddev < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/ddev/ddev/releases/download/v1.21.5-rc1/ddev_macos-amd64.v1.21.5-rc1.tar.gz"
-      sha256 "39ae16424a2b587ca7b1c3cdca828772c42ec67381ffaa04cc47f8d8b327d029"
+      url "https://github.com/ddev/ddev/releases/download/v1.21.5/ddev_macos-amd64.v1.21.5.tar.gz"
+      sha256 "388466e48e8d186f081fa04ebd2a72f4de7ba173e87c89a7132ea23a47256e00"
 
       def install
         if build.head?
@@ -52,9 +52,9 @@ class Ddev < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/ddev/ddev/releases/download/v1.21.5-rc1/ddev_linux-amd64.v1.21.5-rc1.tar.gz"
-      sha256 "7ce00b0859a8b6d06c5ba471ddedbe4bbfb285213fe4e56d2a74460273f8058a"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/ddev/ddev/releases/download/v1.21.5/ddev_linux-arm64.v1.21.5.tar.gz"
+      sha256 "495d589b47e805cad30f009e382455759dfed271ca82e0efd6c328bf7833d4ca"
 
       def install
         if build.head?
@@ -71,9 +71,9 @@ class Ddev < Formula
         end
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ddev/ddev/releases/download/v1.21.5-rc1/ddev_linux-arm64.v1.21.5-rc1.tar.gz"
-      sha256 "c4c030c946732d1e75011e5da095af73403ff2084d6326af1474970f6d114234"
+    if Hardware::CPU.intel?
+      url "https://github.com/ddev/ddev/releases/download/v1.21.5/ddev_linux-amd64.v1.21.5.tar.gz"
+      sha256 "e54a0ed8b0f6b96ced8a882ae7ea6a265d21068ece5b61bd7d683f88bad3226f"
 
       def install
         if build.head?
