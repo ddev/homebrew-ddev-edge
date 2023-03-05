@@ -1,5 +1,5 @@
-# drud/ddev Homebrew *EDGE* formulas
+# ddev/ddev Homebrew *EDGE* formulas
 
-This repository provides updates for drud/ddev-edge
+This repository provides updates for ddev/ddev-edge
 
 
