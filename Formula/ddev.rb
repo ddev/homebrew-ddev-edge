@@ -5,15 +5,15 @@
 class Ddev < Formula
   desc "DDEV"
   homepage "https://github.com/ddev/ddev"
-  version "1.21.6"
+  version "1.22.0-alpha1"
   license "Apache 2"
 
   depends_on "mkcert"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/ddev/ddev/releases/download/v1.21.6/ddev_macos-arm64.v1.21.6.tar.gz"
-      sha256 "9d0030365b0f36edc5501353adb55982e89b3b7c2cf0e48216fc4ccc1f811942"
+      url "https://github.com/ddev/ddev/releases/download/v1.22.0-alpha1/ddev_macos-arm64. v1.22.0-alpha1.tar.gz"
+      sha256 "03f040f115e8b57f92cf174d51ba1cb6ebe3450ddb8ab9d6b4aa1829ab8ce24e"
 
       def install
         if build.head?
@@ -31,8 +31,8 @@ class Ddev < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/ddev/ddev/releases/download/v1.21.6/ddev_macos-amd64.v1.21.6.tar.gz"
-      sha256 "3daff3f5ef00b58fbd499ac428f9cf2a4ac4883dc1ace09ad7ba410814912325"
+      url "https://github.com/ddev/ddev/releases/download/v1.22.0-alpha1/ddev_macos-amd64. v1.22.0-alpha1.tar.gz"
+      sha256 "c1487e61bab053c41af68a6db8879c703298beb487ab9e020fdf32adb25f9a82"
 
       def install
         if build.head?
@@ -53,8 +53,8 @@ class Ddev < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ddev/ddev/releases/download/v1.21.6/ddev_linux-arm64.v1.21.6.tar.gz"
-      sha256 "19752ad3057c4ba0a632100a143de5087d19be83d0db650ce8614454ea623378"
+      url "https://github.com/ddev/ddev/releases/download/v1.22.0-alpha1/ddev_linux-arm64. v1.22.0-alpha1.tar.gz"
+      sha256 "3e0dd3dc91e21c34bbe3f6e11d837f3b162e721fd1957c93450af5572abf81ad"
 
       def install
         if build.head?
@@ -72,8 +72,8 @@ class Ddev < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/ddev/ddev/releases/download/v1.21.6/ddev_linux-amd64.v1.21.6.tar.gz"
-      sha256 "ab5c25159c2bfa2b28305dc8502f538137074e5477cd09ba9d824402283f1213"
+      url "https://github.com/ddev/ddev/releases/download/v1.22.0-alpha1/ddev_linux-amd64. v1.22.0-alpha1.tar.gz"
+      sha256 "f7e579f47ddc213475059e8810fbbddf0b9d0ae6e692b1035b92256226dc2245"
 
       def install
         if build.head?
