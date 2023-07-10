@@ -5,15 +5,15 @@
 class Ddev < Formula
   desc "DDEV"
   homepage "https://github.com/ddev/ddev"
-  version "1.22.0-beta2"
+  version "1.22.0-beta3"
   license "Apache 2"
 
   depends_on "mkcert"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/ddev/ddev/releases/download/v1.22.0-beta2/ddev_macos-arm64.v1.22.0-beta2.tar.gz"
-      sha256 "28ad5bf4bf8d8232b7909514d53c70d9fecef196a922bc720282fe32611a1088"
+    if Hardware::CPU.intel?
+      url "https://github.com/ddev/ddev/releases/download/v1.22.0-beta3/ddev_macos-amd64.v1.22.0-beta3.tar.gz"
+      sha256 "9c97807f176d819185fbadbd94128da6e884199962c60e7ce71769032666ebf0"
 
       def install
         if build.head?
@@ -30,9 +30,9 @@ class Ddev < Formula
         end
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/ddev/ddev/releases/download/v1.22.0-beta2/ddev_macos-amd64.v1.22.0-beta2.tar.gz"
-      sha256 "bc60815412e689c3c8f58d9407de1d1fb4dd44b48866f759123e009c1f457834"
+    if Hardware::CPU.arm?
+      url "https://github.com/ddev/ddev/releases/download/v1.22.0-beta3/ddev_macos-arm64.v1.22.0-beta3.tar.gz"
+      sha256 "c10b8774f184aa835f851da2b6610e65f91f32bf6ae61687ad9d2df3f96ceed2"
 
       def install
         if build.head?
@@ -53,8 +53,8 @@ class Ddev < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ddev/ddev/releases/download/v1.22.0-beta2/ddev_linux-arm64.v1.22.0-beta2.tar.gz"
-      sha256 "66a7632e773b36481734b65a5b0a8875e5e367ff7c839601808930d0da971786"
+      url "https://github.com/ddev/ddev/releases/download/v1.22.0-beta3/ddev_linux-arm64.v1.22.0-beta3.tar.gz"
+      sha256 "e2b3ad5eeab314b500ad858f81ee24e9999ed87de460e6cf7623556572ab7338"
 
       def install
         if build.head?
@@ -72,8 +72,8 @@ class Ddev < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/ddev/ddev/releases/download/v1.22.0-beta2/ddev_linux-amd64.v1.22.0-beta2.tar.gz"
-      sha256 "0464661b190bab8bda0539c32b9ccc96ef949bd6c5e639ad5657af4b5f30f315"
+      url "https://github.com/ddev/ddev/releases/download/v1.22.0-beta3/ddev_linux-amd64.v1.22.0-beta3.tar.gz"
+      sha256 "a00cdc935e7cf2bce118634aca976e68b0a6fc3288678416ee583e0ce31d3b04"
 
       def install
         if build.head?
