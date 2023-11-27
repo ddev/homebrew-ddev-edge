@@ -11,9 +11,9 @@ class Ddev < Formula
   depends_on "mkcert"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/ddev/ddev/releases/download/v1.22.5-rc2/ddev_macos-amd64.v1.22.5-rc2.tar.gz"
-      sha256 "06d64c33c560e050f81cfa6ae452a9dde9eb0828c19d6e890bcfa97774e81cf5"
+    if Hardware::CPU.arm?
+      url "https://github.com/ddev/ddev/releases/download/v1.22.5-rc2/ddev_macos-arm64.v1.22.5-rc2.tar.gz"
+      sha256 "699992de79247c4b3d72e1492a30265f62ba0b1301616ebef1c6324b5f509ecc"
 
       def install
         if build.head?
@@ -33,9 +33,9 @@ class Ddev < Formula
         end
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/ddev/ddev/releases/download/v1.22.5-rc2/ddev_macos-arm64.v1.22.5-rc2.tar.gz"
-      sha256 "a4d390829527c856e4678e83c414af20ce16cfcdae626e22072b3723ff43bd3a"
+    if Hardware::CPU.intel?
+      url "https://github.com/ddev/ddev/releases/download/v1.22.5-rc2/ddev_macos-amd64.v1.22.5-rc2.tar.gz"
+      sha256 "32967bfaf084757a636b0576d5f9f769222b63af7f5817f5075b0bd6d9d2fe58"
 
       def install
         if build.head?
@@ -60,7 +60,7 @@ class Ddev < Formula
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/ddev/ddev/releases/download/v1.22.5-rc2/ddev_linux-arm64.v1.22.5-rc2.tar.gz"
-      sha256 "7ec605b8f07872f97c24e836122647ac284bcf58b25e73d2ef51f16a29dd62f1"
+      sha256 "ee36c32f1f5929f37f9618170baa971d092a9ac9287b0b2bc0c2e515c0c00279"
 
       def install
         if build.head?
@@ -82,7 +82,7 @@ class Ddev < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/ddev/ddev/releases/download/v1.22.5-rc2/ddev_linux-amd64.v1.22.5-rc2.tar.gz"
-      sha256 "53d4915ad6bd2ebe8bccbad773d6026ad6d1ef44aa4ac400e33a6740d1aafcb8"
+      sha256 "ea83dadca13526983fdb29b28de179f1ee004305449bcfcafc4463adb243af73"
 
       def install
         if build.head?
