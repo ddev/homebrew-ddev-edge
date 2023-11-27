@@ -5,15 +5,15 @@
 class Ddev < Formula
   desc "DDEV"
   homepage "https://github.com/ddev/ddev"
-  version "1.22.5-rc2"
+  version "1.22.5"
   license "Apache 2"
 
   depends_on "mkcert"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/ddev/ddev/releases/download/v1.22.5-rc2/ddev_macos-arm64.v1.22.5-rc2.tar.gz"
-      sha256 "699992de79247c4b3d72e1492a30265f62ba0b1301616ebef1c6324b5f509ecc"
+      url "https://github.com/ddev/ddev/releases/download/v1.22.5/ddev_macos-arm64.v1.22.5.tar.gz"
+      sha256 "259d8a70fe4e7ad2d72bae9eb3afa25af92bc1f476814f9f2c6d74894409abef"
 
       def install
         if build.head?
@@ -34,8 +34,8 @@ class Ddev < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/ddev/ddev/releases/download/v1.22.5-rc2/ddev_macos-amd64.v1.22.5-rc2.tar.gz"
-      sha256 "32967bfaf084757a636b0576d5f9f769222b63af7f5817f5075b0bd6d9d2fe58"
+      url "https://github.com/ddev/ddev/releases/download/v1.22.5/ddev_macos-amd64.v1.22.5.tar.gz"
+      sha256 "35e59b70741ea492030defbb7093798fb19aa1edea5f49d984948a31c1bc0074"
 
       def install
         if build.head?
@@ -59,8 +59,8 @@ class Ddev < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ddev/ddev/releases/download/v1.22.5-rc2/ddev_linux-arm64.v1.22.5-rc2.tar.gz"
-      sha256 "ee36c32f1f5929f37f9618170baa971d092a9ac9287b0b2bc0c2e515c0c00279"
+      url "https://github.com/ddev/ddev/releases/download/v1.22.5/ddev_linux-arm64.v1.22.5.tar.gz"
+      sha256 "c49c03e7e0337dbe5e9dd91898c10177a2504eccfcdf292ecc182c066882d1c1"
 
       def install
         if build.head?
@@ -81,8 +81,8 @@ class Ddev < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/ddev/ddev/releases/download/v1.22.5-rc2/ddev_linux-amd64.v1.22.5-rc2.tar.gz"
-      sha256 "ea83dadca13526983fdb29b28de179f1ee004305449bcfcafc4463adb243af73"
+      url "https://github.com/ddev/ddev/releases/download/v1.22.5/ddev_linux-amd64.v1.22.5.tar.gz"
+      sha256 "3ea31e034819f76228629db5ca577fba491e3875ed5949304c28b0c6f96a97ef"
 
       def install
         if build.head?
