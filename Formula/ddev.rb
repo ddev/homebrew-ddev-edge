@@ -5,15 +5,15 @@
 class Ddev < Formula
   desc "DDEV"
   homepage "https://github.com/ddev/ddev"
-  version "1.22.7"
+  version "1.23.0-alpha1"
   license "Apache 2"
 
   depends_on "mkcert"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/ddev/ddev/releases/download/v1.22.7/ddev_macos-arm64.v1.22.7.tar.gz"
-      sha256 "a03c3ded87172a2f54481a5988cb194c9bae4328794e8e55405c682733b07818"
+      url "https://github.com/ddev/ddev/releases/download/v1.23.0-alpha1/ddev_macos-arm64.v1.23.0-alpha1.tar.gz"
+      sha256 "5ca91075087c8d55224537437a601f8f2eb266b24185325c747aea98d716949d"
 
       def install
         if build.head?
@@ -34,8 +34,8 @@ class Ddev < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/ddev/ddev/releases/download/v1.22.7/ddev_macos-amd64.v1.22.7.tar.gz"
-      sha256 "a833ee8e2327a70b54077c88f92919d3ac270df678b07107dc5037583ec21b79"
+      url "https://github.com/ddev/ddev/releases/download/v1.23.0-alpha1/ddev_macos-amd64.v1.23.0-alpha1.tar.gz"
+      sha256 "893bd9cfe19845aef939fd808f61bcf6b88e9ace51a017d5501c238a1007b6f2"
 
       def install
         if build.head?
@@ -59,8 +59,8 @@ class Ddev < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ddev/ddev/releases/download/v1.22.7/ddev_linux-arm64.v1.22.7.tar.gz"
-      sha256 "66ae9aad092d3c7b4831615ce2186e70b55749b9dfc4cb6bb00940bd3c131aba"
+      url "https://github.com/ddev/ddev/releases/download/v1.23.0-alpha1/ddev_linux-arm64.v1.23.0-alpha1.tar.gz"
+      sha256 "185a5ec3eee9bbc58e374f1943b6c2258a6e72dc8b2fa1e5129386f1076d61ad"
 
       def install
         if build.head?
@@ -81,8 +81,8 @@ class Ddev < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/ddev/ddev/releases/download/v1.22.7/ddev_linux-amd64.v1.22.7.tar.gz"
-      sha256 "03cd335dd1e6ef0c766dc96a45376ea75f3b2552f1d354ce4fb8f2ff76c0aa7a"
+      url "https://github.com/ddev/ddev/releases/download/v1.23.0-alpha1/ddev_linux-amd64.v1.23.0-alpha1.tar.gz"
+      sha256 "5622dba0bcf249ba00e2be0b8f6698ec433630690f1c9e0e6932d9df635719c5"
 
       def install
         if build.head?
